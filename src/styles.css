@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+    --BorderImg: #a775f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 20px auto;
+    padding: 10px;
+    min-width: 325px;
+    max-width: 325px;
+    background-color: var(--Lightgrayishblue);
+    user-select: none;
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+}
+
+.profile img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.cards .card {
+    display: grid;
+    gap: 1rem;
+    padding: 28px;
+    border-radius: 10px;
+}
+.profile {
+    display: flex;
+    gap: 1rem;
+}
+
+.proffesion_card {
+    opacity: 50%;
+}
+
+.coment_card {
+    font-size: 1.48rem;
+    z-index: 1;
+}
+
+.paragraph_card {
+    opacity: 70%;
+}
+
+.card:nth-child(1) {
+    background-color: var(--Moderateviolet);
+    color: var(--White);
+    position: relative;
+}
+
+.card:nth-child(1) .profile img {
+    border: 2px solid var(--BorderImg);
+}
+
+.card:nth-child(2) {
+    background-color: var(--Verydarkgrayishblue);
+    color: var(--White);
+}
+
+.card:nth-child(3) {
+    background-color: var(--White);
+}
+
+.card:nth-child(4) .profile img {
+    border: 2px solid var(--BorderImg);
+}
+.card:nth-child(4) {
+    background-color: var(--Verydarkblackishblue);
+    color: var(--White);
+}
+
+.card:nth-child(5) {
+    background-color: var(--White);
+}
+
+svg{
+    position: absolute;
+    right: 10%;
+}
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 570px) {
+    
+    body{
+        transition: all 2s;
+        max-width: 1100px;
+        min-width: 1100px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .card:nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .card:nth-child(2) {
+        grid-column: 3/4;        
+        grid-row: 1/2;
+    }
+
+    .card:nth-child(3) {
+        grid-column: 1/2;        
+        grid-row: 2/3;
+    }
+    .card:nth-child(4) {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    
+    .card:nth-child(5) {
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+    svg{
+        right: 17.5%;
+    }
+}
